@@ -25,8 +25,13 @@ public sealed class InvalidCategoryCodeException : DomainException
 
 public sealed class InvalidSerialNumberException : DomainException
 {
-    public InvalidSerialNumberException(string sn)
-        : base($"Serial number {sn} is invalid. It must be 10-30 characters.") { }
+    public string SerialNumber { get; }
+
+    public InvalidSerialNumberException(string serialNumber)
+        : base($"Serial number {serialNumber} is invalid. It must be 10-30 characters.")
+    {
+        SerialNumber = serialNumber;
+    }
 
     public InvalidSerialNumberException()
         : base() { }
