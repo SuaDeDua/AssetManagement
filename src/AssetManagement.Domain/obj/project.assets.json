@@ -1,0 +1,132 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "MediatR.Contracts/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AssetManagement.SharedKernel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "MediatR.Contracts": "2.0.1"
+        },
+        "compile": {
+          "bin/placeholder/AssetManagement.SharedKernel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AssetManagement.SharedKernel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MediatR.Contracts/2.0.1": {
+      "sha512": "FYv95bNT4UwcNA+G/J1oX5OpRiSUxteXaUt2BJbRSdRNiIUNbggJF69wy6mnk2wYToaanpdXZdCwVylt96MpwQ==",
+      "type": "package",
+      "path": "mediatr.contracts/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/netstandard2.0/MediatR.Contracts.dll",
+        "lib/netstandard2.0/MediatR.Contracts.xml",
+        "mediatr.contracts.2.0.1.nupkg.sha512",
+        "mediatr.contracts.nuspec"
+      ]
+    },
+    "AssetManagement.SharedKernel/1.0.0": {
+      "type": "project",
+      "path": "../AssetManagement.SharedKernel/AssetManagement.SharedKernel.csproj",
+      "msbuildProject": "../AssetManagement.SharedKernel/AssetManagement.SharedKernel.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "AssetManagement.SharedKernel >= 1.0.0",
+      "MediatR.Contracts >= 2.0.1"
+    ]
+  },
+  "packageFolders": {
+    "/Users/suadedua/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/AssetManagement.Domain.csproj",
+      "projectName": "AssetManagement.Domain",
+      "projectPath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/AssetManagement.Domain.csproj",
+      "packagesPath": "/Users/suadedua/.nuget/packages/",
+      "outputPath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/suadedua/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.SharedKernel/AssetManagement.SharedKernel.csproj": {
+              "projectPath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.SharedKernel/AssetManagement.SharedKernel.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.100"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "dependencies": {
+          "MediatR.Contracts": {
+            "target": "Package",
+            "version": "[2.0.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

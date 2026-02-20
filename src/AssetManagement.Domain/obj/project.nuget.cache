@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "C7qH967EAO8=",
+  "success": true,
+  "projectFilePath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/AssetManagement.Domain.csproj",
+  "expectedPackageFiles": [
+    "/Users/suadedua/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

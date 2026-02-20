@@ -1,0 +1,4 @@
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Shared/obj/Debug/net9.0/AssetManagement.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Shared/obj/Debug/net9.0/AssetManagement.Shared.AssemblyInfoInputs.cache
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Shared/obj/Debug/net9.0/AssetManagement.Shared.AssemblyInfo.cs
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Shared/obj/Debug/net9.0/AssetManagement.Shared.csproj.CoreCompileInputs.cache

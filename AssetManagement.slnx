@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Solution Items/">                                                                                                                │
+    <File Path=".editorconfig" />                                                                                                                 │
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/AssetManagement.Domain/AssetManagement.Domain.csproj" />
+    <Project Path="src/AssetManagement.Application/AssetManagement.Application.csproj" />
+    <Project Path="src/AssetManagement.Shared/AssetManagement.Shared.csproj" />
+  </Folder>
+</Solution>
