@@ -17,4 +17,8 @@ public record Address
 
         Value = value.Trim();
     }
+
+    public static implicit operator string(Address address) => address.Value;
+
+    public static explicit operator Address(string value) => new(value);
 }

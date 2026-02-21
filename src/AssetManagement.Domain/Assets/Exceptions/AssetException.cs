@@ -4,8 +4,17 @@ namespace AssetManagement.Domain.Assets.Exceptions;
 
 public sealed class AssetException : DomainException
 {
+    public AssetException(string message)
+        : base(message) { }
+
     public AssetException()
         : base() { }
+}
+
+public sealed class EmptyAssetNameException : DomainException
+{
+    public EmptyAssetNameException()
+        : base("Asset name cannot be empty.") { }
 }
 
 public sealed class EmptyAssetTagException : DomainException
