@@ -7,6 +7,7 @@ public record AssetCreatedEvent(
     Guid AssetId,
     Guid CompanyId,
     Guid LocationId,
+    Guid AssetCategoryId,
     Guid AssetModelId,
     SerialNumber SerialNumber,
     DateTimeOffset CreatedAt
