@@ -15,17 +15,14 @@
           }
         }
       },
-      "AssetManagement.SharedKernel/1.0.0": {
+      "AssetManagement.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "MediatR.Contracts": "2.0.1"
-        },
         "compile": {
-          "bin/placeholder/AssetManagement.SharedKernel.dll": {}
+          "bin/placeholder/AssetManagement.Shared.dll": {}
         },
         "runtime": {
-          "bin/placeholder/AssetManagement.SharedKernel.dll": {}
+          "bin/placeholder/AssetManagement.Shared.dll": {}
         }
       }
     }
@@ -45,15 +42,15 @@
         "mediatr.contracts.nuspec"
       ]
     },
-    "AssetManagement.SharedKernel/1.0.0": {
+    "AssetManagement.Shared/1.0.0": {
       "type": "project",
-      "path": "../AssetManagement.SharedKernel/AssetManagement.SharedKernel.csproj",
-      "msbuildProject": "../AssetManagement.SharedKernel/AssetManagement.SharedKernel.csproj"
+      "path": "../AssetManagement.Shared/AssetManagement.Shared.csproj",
+      "msbuildProject": "../AssetManagement.Shared/AssetManagement.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "AssetManagement.SharedKernel >= 1.0.0",
+      "AssetManagement.Shared >= 1.0.0",
       "MediatR.Contracts >= 2.0.1"
     ]
   },
@@ -82,8 +79,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.SharedKernel/AssetManagement.SharedKernel.csproj": {
-              "projectPath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.SharedKernel/AssetManagement.SharedKernel.csproj"
+            "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Shared/AssetManagement.Shared.csproj": {
+              "projectPath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Shared/AssetManagement.Shared.csproj"
             }
           }
         }

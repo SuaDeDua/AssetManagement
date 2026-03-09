@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/suadedua/Documents/NET-Course/AssetManagement/AssetManagement.Application/AssetManagement.Application.csproj": {}
+    "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Application/AssetManagement.Application.csproj": {}
   },
   "projects": {
-    "/Users/suadedua/Documents/NET-Course/AssetManagement/AssetManagement.Application/AssetManagement.Application.csproj": {
+    "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Application/AssetManagement.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/suadedua/Documents/NET-Course/AssetManagement/AssetManagement.Application/AssetManagement.Application.csproj",
+        "projectUniqueName": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Application/AssetManagement.Application.csproj",
         "projectName": "AssetManagement.Application",
-        "projectPath": "/Users/suadedua/Documents/NET-Course/AssetManagement/AssetManagement.Application/AssetManagement.Application.csproj",
+        "projectPath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Application/AssetManagement.Application.csproj",
         "packagesPath": "/Users/suadedua/.nuget/packages/",
-        "outputPath": "/Users/suadedua/Documents/NET-Course/AssetManagement/AssetManagement.Application/obj/",
+        "outputPath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/suadedua/.nuget/NuGet/NuGet.Config"
@@ -43,6 +43,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

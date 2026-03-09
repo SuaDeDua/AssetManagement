@@ -26,8 +26,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.SharedKernel/AssetManagement.SharedKernel.csproj": {
-                "projectPath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.SharedKernel/AssetManagement.SharedKernel.csproj"
+              "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Shared/AssetManagement.Shared.csproj": {
+                "projectPath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Shared/AssetManagement.Shared.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.SharedKernel/AssetManagement.SharedKernel.csproj": {
+    "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Shared/AssetManagement.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.SharedKernel/AssetManagement.SharedKernel.csproj",
-        "projectName": "AssetManagement.SharedKernel",
-        "projectPath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.SharedKernel/AssetManagement.SharedKernel.csproj",
+        "projectUniqueName": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Shared/AssetManagement.Shared.csproj",
+        "projectName": "AssetManagement.Shared",
+        "projectPath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Shared/AssetManagement.Shared.csproj",
         "packagesPath": "/Users/suadedua/.nuget/packages/",
-        "outputPath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.SharedKernel/obj/",
+        "outputPath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/suadedua/.nuget/NuGet/NuGet.Config"
@@ -112,12 +112,6 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "dependencies": {
-            "MediatR.Contracts": {
-              "target": "Package",
-              "version": "[2.0.1, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

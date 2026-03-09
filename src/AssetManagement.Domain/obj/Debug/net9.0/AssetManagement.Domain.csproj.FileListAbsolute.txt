@@ -1,0 +1,16 @@
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/obj/Debug/net9.0/AssetManagement.Domain.csproj.AssemblyReference.cache
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/obj/Debug/net9.0/AssetManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/obj/Debug/net9.0/AssetManagement.Domain.AssemblyInfoInputs.cache
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/obj/Debug/net9.0/AssetManagement.Domain.AssemblyInfo.cs
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/obj/Debug/net9.0/AssetManagement.Domain.csproj.CoreCompileInputs.cache
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/obj/Debug/net9.0/AssetManagement.Domain.sourcelink.json
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/bin/Debug/net9.0/AssetManagement.Domain.deps.json
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/bin/Debug/net9.0/AssetManagement.Domain.dll
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/bin/Debug/net9.0/AssetManagement.Domain.pdb
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/bin/Debug/net9.0/AssetManagement.Shared.dll
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/bin/Debug/net9.0/AssetManagement.Shared.pdb
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/obj/Debug/net9.0/AssetMan.B2DACDB3.Up2Date
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/obj/Debug/net9.0/AssetManagement.Domain.dll
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/obj/Debug/net9.0/refint/AssetManagement.Domain.dll
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/obj/Debug/net9.0/AssetManagement.Domain.pdb
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Domain/obj/Debug/net9.0/ref/AssetManagement.Domain.dll

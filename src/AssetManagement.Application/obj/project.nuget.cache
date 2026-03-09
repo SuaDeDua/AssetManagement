@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "9//xQ9kF9kE=",
+  "dgSpecHash": "jqfD3Wks4d8=",
   "success": true,
-  "projectFilePath": "/Users/suadedua/Documents/NET-Course/AssetManagement/AssetManagement.Application/AssetManagement.Application.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/AssetManagement.Application/AssetManagement.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/suadedua/.nuget/packages/mediatr/12.1.1/mediatr.12.1.1.nupkg.sha512",
+    "/Users/suadedua/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/Users/suadedua/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

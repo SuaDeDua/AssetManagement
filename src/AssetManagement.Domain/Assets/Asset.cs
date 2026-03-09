@@ -2,7 +2,6 @@ using AssetManagement.Domain.Assets.Events;
 using AssetManagement.Domain.Assets.Services;
 using AssetManagement.Domain.Assets.ValueObjects;
 using AssetManagement.Domain.Locations;
-using AssetManagement.Domain.Locations.ValueObjects;
 using AssetManagement.Domain.Shared.Common;
 using AssetManagement.Domain.Shared.ValueObjects;
 
@@ -11,18 +10,19 @@ namespace AssetManagement.Domain.Assets;
 public sealed class Asset : AggregateRoot<Guid>
 {
     public Guid CompanyId { get; }
-    public AssetTag Tag { get; private set; }
-    public AssetName Name { get; private set; }
-    public SerialNumber SerialNumber { get; private set; }
     public Guid AssetModelId { get; }
-    public AssetStatus Status { get; private set; }
-    public HardwareProfile Profile { get; private set; }
-    public Description Note { get; private set; }
     public Guid LocationId { get; }
     public Guid AssetCategoryId { get; }
+    public Guid OrderInformationId { get; }
+    public Guid? AssignedUserId { get; }
+    public AssetTag Tag { get; private set; }
+    public AssetName Name { get; private set; }
+    public AssetStatus Status { get; private set; }
+    public SerialNumber SerialNumber { get; private set; }
+    public HardwareProfile Profile { get; private set; }
+    public Description Note { get; private set; }
     public bool Requestable { get; private set; }
     public ImageUrl Image { get; private set; }
-    public Guid OrderInformationId { get; }
 
     private Asset() { }
 
@@ -55,7 +55,7 @@ public sealed class Asset : AggregateRoot<Guid>
         OrderInformationId = orderInformationId;
     }
 
-    public static async Task<Asset> CreateAsync(
+    public static async Task<Result<Asset>> CreateAssetAsync(
         IAssetTagProvider tagProvider,
         AssetCategory category,
         SerialNumber serial,
@@ -102,6 +102,6 @@ public sealed class Asset : AggregateRoot<Guid>
             )
         );
 
-        return asset;
+        return Result<Asset>.Success(asset);
     }
 }

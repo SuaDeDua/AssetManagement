@@ -6,6 +6,8 @@ public sealed record Name
 
     public string Value { get; }
 
+    private Name() { }
+
     public Name(string value)
     {
         if (string.IsNullOrWhiteSpace(value))

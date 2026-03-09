@@ -1,0 +1,8 @@
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/tests/AssetManagement.Domain.UnitTests/bin/Debug/net10.0/.msCoverageSourceRootsMapping_AssetManagement.Domain.UnitTests
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/tests/AssetManagement.Domain.UnitTests/bin/Debug/net10.0/CoverletSourceRootsMapping_AssetManagement.Domain.UnitTests
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/tests/AssetManagement.Domain.UnitTests/obj/Debug/net10.0/AssetManagement.Domain.UnitTests.csproj.AssemblyReference.cache
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/tests/AssetManagement.Domain.UnitTests/obj/Debug/net10.0/AssetManagement.Domain.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/tests/AssetManagement.Domain.UnitTests/obj/Debug/net10.0/AssetManagement.Domain.UnitTests.AssemblyInfoInputs.cache
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/tests/AssetManagement.Domain.UnitTests/obj/Debug/net10.0/AssetManagement.Domain.UnitTests.AssemblyInfo.cs
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/tests/AssetManagement.Domain.UnitTests/obj/Debug/net10.0/AssetManagement.Domain.UnitTests.csproj.CoreCompileInputs.cache
+/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/tests/AssetManagement.Domain.UnitTests/obj/Debug/net10.0/AssetManagement.Domain.UnitTests.sourcelink.json
