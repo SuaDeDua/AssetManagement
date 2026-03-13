@@ -14,20 +14,21 @@ public sealed record SerialNumber
         Value = value;
     }
 
-    public static SerialNumber Create(string? existingSn = null)
+    private SerialNumber() { }
+
+    public static SerialNumber Create(CategoryCode code, string? existingSn = null)
     {
         return !string.IsNullOrWhiteSpace(existingSn)
             ? new SerialNumber(existingSn)
-            : GenerateNew();
+            : GenerateNew(code);
     }
 
-    public static SerialNumber GenerateNew()
+    public static SerialNumber GenerateNew(CategoryCode code)
     {
-        string now = DateTime.UtcNow.ToString("yyMMdd");
+        string now = DateTime.UtcNow.ToString("ddMMyy");
         string timeStamp = (DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() % 10000).ToString("D4");
-        string randomString = Guid.NewGuid().ToString("N")[..4].ToUpper();
 
-        return new SerialNumber($"SN{now}{timeStamp}{randomString}");
+        return new SerialNumber($"SN{code.Value}{now}{timeStamp}");
     }
 
     public override string ToString() => Value;

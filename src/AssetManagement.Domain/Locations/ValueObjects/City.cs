@@ -1,3 +1,3 @@
 namespace AssetManagement.Domain.Locations.ValueObjects;
 
-public sealed record City(string Value);
+public record City(string Value);

@@ -5,10 +5,11 @@ namespace AssetManagement.Domain.HandoverTickets;
 
 public sealed class HandoverTicket : AggregateRoot<Guid>
 {
-    public string TicketNumber { get; private set; }
+    public TicketNumber TicketNumber { get; private set; }
     public HandoverType Type { get; private set; }
     public HandoverStatus Status { get; private set; }
-    public Guid SenderUserId { get; }
-    public Guid ReceiverId { get; }
+    public Guid SenderUserId { get; private set; }
+    public Guid ReceiverId { get; private set; }
+    public Guid TicketLocationId { get; private set; }
     public DateRange Duration { get; private set; }
 }

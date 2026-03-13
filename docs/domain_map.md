@@ -5,7 +5,7 @@
 ```text
 src/
 ├── AssetManagement.SharedKernel/        <-- (Nền tảng: Dùng chung cho nhiều dự án sau này)
-│   ├── Abstractions/                    
+│   ├── Abstractions/
 │   │   ├── Entity.cs                    <-- Base class cho các thực thể (Generic Id)
 │   │   ├── AuditableEntity.cs           <-- Thực thể có lưu vết ngày tạo/sửa
 │   │   ├── IAggregateRoot.cs            <-- Đánh dấu Root của một nhóm thực thể
@@ -114,4 +114,117 @@ graph TB
     class Movement,Notification,Reporting readServiceStyle
     class ServiceBus eventStyle
     class SqlDB,CosmosDB dataStyle
+```
+
+```cs
+users [icon: user, color: blue] {
+id Guid pk
+employeeId string
+email string
+phoneNumber int
+IEnumerble<Asset> AssetId Guid
+usePC bool
+loginEnable bool
+}
+
+asset [icon: computer, color: blue] {
+id Guid pk
+note? string
+status enum
+
+assetName string AutoCreate if null
+serialNumber string AutoCreate if null
+
+assignedUserId Guid
+companyId Guid
+modelId Guid [manufacturerId, categoryId]
+orderInformationId Guid
+
+defaultLocationId Guid
+locationId Guid
+
+createdAt datetime
+createdByUserId Guid
+updatedAt datetime
+updatedByUserId Guid
+checkoutAt datetime
+checkoutByUserId Guid
+deletedAt datetime
+deletedByUserId Guid
+}
+
+supplier {
+id Guid
+name string
+contactInformation string
+purchaseLocationId Guid
+serviceCenterLocationId Guid
+}
+
+orderInformation {
+id Guid
+orderNumber string
+purchaseDate string
+purchaseCost Money
+supplierId Guid
+}
+
+assetModel [icon: home] {
+id Guid pk
+name string
+note string
+modelNo string
+image string
+
+manufacturerId Guid
+categoryId Guid
+fieldSetId Guid
+
+createdAt datetime
+createByUserId Guid
+updatedAt datetime
+updatedByUserId Guid
+deletedAt datetime
+deletedByUserId Guid
+}
+
+manufacturer [icon: folder] {
+id Guid
+name string
+urlHomePage string
+image string
+}
+
+category [icon: message-circle, color: green] {
+id Guid
+name string
+assetType enum
+}
+
+fieldSet [icon: mail, color: green] {
+id Guid
+name string
+IEnumberble<FieldItem> FieldItem Guid
+}
+
+customField {
+id Guid
+name string
+element string
+format string
+}
+
+fieldItem {
+id Guid
+fieldSetId Guid
+customFieldId Guid
+Order int
+}
+
+users.teams <> teams.id
+workspaces.folderId > folders.id
+workspaces.teamId > teams.id
+chat.workspaceId > workspaces.id
+invite.workspaceId > workspaces.id
+invite.inviterId > users.id
 ```
