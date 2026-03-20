@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "v7SsgKljO/g=",
+  "success": true,
+  "projectFilePath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/API/AssetManagement.Api/AssetManagement.Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/suadedua/.nuget/packages/microsoft.aspnetcore.openapi/9.0.10/microsoft.aspnetcore.openapi.9.0.10.nupkg.sha512",
+    "/Users/suadedua/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
