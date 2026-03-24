@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "AssetManagement.Shared.Kernel/1.0.0": {
+        "runtime": {
+          "AssetManagement.Shared.Kernel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AssetManagement.Shared.Kernel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

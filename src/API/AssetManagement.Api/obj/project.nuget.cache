@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "v7SsgKljO/g=",
+  "dgSpecHash": "2/GnCdYwGJk=",
   "success": true,
   "projectFilePath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/API/AssetManagement.Api/AssetManagement.Api.csproj",
   "expectedPackageFiles": [
-    "/Users/suadedua/.nuget/packages/microsoft.aspnetcore.openapi/9.0.10/microsoft.aspnetcore.openapi.9.0.10.nupkg.sha512",
-    "/Users/suadedua/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+    "/Users/suadedua/.nuget/packages/microsoft.aspnetcore.openapi/10.0.5/microsoft.aspnetcore.openapi.10.0.5.nupkg.sha512",
+    "/Users/suadedua/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512",
+    "/Users/suadedua/.nuget/packages/sonaranalyzer.csharp/10.21.0.135717/sonaranalyzer.csharp.10.21.0.135717.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "C7u8RY09IoU=",
+  "success": true,
+  "projectFilePath": "/Users/suadedua/Documents/dotnet/NET-Project/AssetManagement/src/Shared/AssetManagement.Shared.Kernel/AssetManagement.Shared.Kernel.csproj",
+  "expectedPackageFiles": [
+    "/Users/suadedua/.nuget/packages/sonaranalyzer.csharp/10.21.0.135717/sonaranalyzer.csharp.10.21.0.135717.nupkg.sha512"
+  ],
+  "logs": []
+}

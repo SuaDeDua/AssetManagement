@@ -1,6 +1,18 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+  </Folder>
   <Folder Name="/src/" />
   <Folder Name="/src/API/">
     <Project Path="src/API/AssetManagement.Api/AssetManagement.Api.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/" />
+  <Folder Name="/src/Modules/Assets/">
+    <Project Path="src/Modules/Assets/AssetManagement.Modules.Assets.Domain/AssetManagement.Modules.Assets.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Shared/">
+    <Project Path="src/Shared/AssetManagement.Shared.Domain/AssetManagement.Shared.Domain.csproj" />
+    <Project Path="src/Shared/AssetManagement.Shared.Kernel/AssetManagement.Shared.Kernel.csproj" />
   </Folder>
 </Solution>
