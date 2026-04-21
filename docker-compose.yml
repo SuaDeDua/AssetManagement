@@ -1,0 +1,22 @@
+services:
+  assetmanagement.api:
+    image: ${DOCKER_REGISTRY-}assetmanagementapi
+    container_name: AssetManagement.Api
+    build:
+      context: .
+      dockerfile: src/API/AssetManagement.Api/dockerfile
+    ports:
+      - "5001:8081"
+      - "5002:8082"
+
+  assmanagement.database:
+      image: postgres:16
+      container_name: AssetManagement.Database
+      environment:
+        - POSTGRES_DB=assetmanagement
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+      volumes:
+        - ./.containers/db:/var/lib/postgresql/data
+      ports:
+        - "5433:5432"
