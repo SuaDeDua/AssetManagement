@@ -4,10 +4,10 @@ Với dự án lớn, cách tổ chức tốt nhất là **Chia theo Aggregate (
 
 Dưới đây là cấu trúc thư mục tối ưu cho một module, ví dụ lấy module **`Organizations`** (chứa User, Company, Department) từ bản thiết kế ER của bạn làm mẫu:
 
-### Cấu trúc thư mục tầng Domain (`AssetManagement.Modules.Organizations.Domain`)
+### Cấu trúc thư mục tầng Domain (`Assetly.Modules.Organizations.Domain`)
 
 ```text
-AssetManagement.Modules.Organizations.Domain/
+Assetly.Modules.Organizations.Domain/
 ├── Users/                              # Aggregate Root: User
 │   ├── User.cs                         # Thực thể chính (kế thừa AggregateRoot<Guid>)
 │   ├── UserErrors.cs                   # Định nghĩa các mã lỗi (ErrorType) cho User

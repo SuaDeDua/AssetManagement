@@ -1,4 +1,4 @@
-sau khi tạo xong project sẽ dùng lệnh dotnet sln AssetManagement.slnx add **/*.csproj để tự động thêm vào project tổng
+sau khi tạo xong project sẽ dùng lệnh dotnet sln Assetly.slnx add **/*.csproj để tự động thêm vào project tổng
 
 tree-file mới đầu vào sẽ có chọn slnx hoặc sln
 

@@ -1,13 +1,13 @@
 Tầng **Catalogs** (Danh mục) là một module đặc thù. Dựa trên bản thiết kế ER Diagram của bạn, module này thiên về quản lý **Meta-data (Siêu dữ liệu)** cho hệ thống tài sản, bao gồm các cấu hình động (`FieldSet`, `CustomField`) và các danh mục phân loại (`Category`, `Manufacturer`, `AssetModel`).
 
-Vì đặc tính của module này là **"Ít thay đổi (Low Churn), Nhiều người đọc (High Read)"** và **"Quan hệ cấu trúc chặt chẽ"**, cách phân chia thư mục trong tầng Domain (`AssetManagement.Modules.Catalogs.Domain`) cần phản ánh rõ các Aggregate Root (Thực thể gốc).
+Vì đặc tính của module này là **"Ít thay đổi (Low Churn), Nhiều người đọc (High Read)"** và **"Quan hệ cấu trúc chặt chẽ"**, cách phân chia thư mục trong tầng Domain (`Assetly.Modules.Catalogs.Domain`) cần phản ánh rõ các Aggregate Root (Thực thể gốc).
 
 Dưới đây là cấu trúc thư mục tối ưu cho tầng Domain của module **Catalogs**, tuân thủ nguyên tắc Feature-based / Aggregate-based của Evently:
 
-### Cấu trúc thư mục `AssetManagement.Modules.Catalogs.Domain`
+### Cấu trúc thư mục `Assetly.Modules.Catalogs.Domain`
 
 ```text
-AssetManagement.Modules.Catalogs.Domain/
+Assetly.Modules.Catalogs.Domain/
 ├── AssetModels/                        # Aggregate Root chính: Mẫu tài sản (VD: Dell XPS 15)
 │   ├── AssetModel.cs                   # Thực thể trung tâm, liên kết tới Manufacturer, Category, FieldSet
 │   ├── AssetModelErrors.cs

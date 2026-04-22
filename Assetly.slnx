@@ -1,0 +1,25 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/API/">
+    <Project Path="src/API/Assetly.Api/Assetly.Api.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/" />
+  <Folder Name="/src/Modules/Assets/">
+    <Project Path="src/Modules/Assets/Assetly.Modules.Assets.Application/Assetly.Modules.Assets.Application.csproj" />
+    <Project Path="src/Modules/Assets/Assetly.Modules.Assets.Domain/Assetly.Modules.Assets.Domain.csproj" />
+    <Project Path="src/Modules/Assets/Assetly.Modules.Assets.Infrastructure/Assetly.Modules.Assets.Infrastructure.csproj" />
+    <Project Path="src/Modules/Assets/Assetly.Modules.Assets.Presentation/Assetly.Modules.Assets.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/src/Shared/">
+    <Project Path="src/Shared/Assetly.Shared.Application/Assetly.Shared.Application.csproj" />
+    <Project Path="src/Shared/Assetly.Shared.Auditing/Assetly.Shared.Auditing.csproj" />
+    <Project Path="src/Shared/Assetly.Shared.Domain/Assetly.Shared.Domain.csproj" />
+    <Project Path="src/Shared/Assetly.Shared.Infrastructure/Assetly.Shared.Infrastructure.csproj" />
+    <Project Path="src/Shared/Assetly.Shared.Kernel/Assetly.Shared.Kernel.csproj" />
+  </Folder>
+</Solution>

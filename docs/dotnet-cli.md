@@ -11,26 +11,26 @@ Dưới đây là một "Bản đồ Cheat Sheet" các lệnh CLI quyền lực 
 
 ```bash
 # Tạo một lèo các thư mục lồng nhau
-mkdir -p src/API/AssetManagement.Api
+mkdir -p src/API/Assetly.Api
 
 # Chuyển vào thư mục đó
-cd src/API/AssetManagement.Api
+cd src/API/Assetly.Api
 ```
 
 ### 2. Quản lý Solution (.sln / .slnx)
 
 ```bash
 # Tạo file Solution mới tinh
-dotnet new sln -n AssetManagement
+dotnet new sln -n Assetly
 
 # Thêm 1 project vào Solution
-dotnet sln AssetManagement.sln add src/API/AssetManagement.Api/AssetManagement.Api.csproj
+dotnet sln Assetly.sln add src/API/AssetManagement.Api/AssetManagement.Api.csproj
 
 # Thêm nhiều project cùng lúc (Dùng Wildcard - Rất bá đạo!)
-dotnet sln AssetManagement.sln add **/*.csproj
+dotnet sln Assetly.sln add **/*.csproj
 
 # Xóa 1 project khỏi Solution
-dotnet sln AssetManagement.sln remove src/AssetManagement.Domain/AssetManagement.Domain.csproj
+dotnet sln Assetly.sln remove src/AssetManagement.Domain/AssetManagement.Domain.csproj
 ```
 
 ### 3. Tạo Project (.csproj)
@@ -38,20 +38,20 @@ Bạn có thể tạo ra hầu hết mọi loại ứng dụng.
 
 ```bash
 # Tạo dự án Web API (Backend)
-dotnet new webapi -n AssetManagement.Api -o src/API/AssetManagement.Api
+dotnet new webapi -n Assetly.Api -o src/API/AssetManagement.Api
 
 # Tạo dự án Web API
-dotnet new webapi -n AssetManagement.Api -o src/API/AssetManagement.Api
+dotnet new webapi -n Assetly.Api -o src/API/AssetManagement.Api
      --no-https false --enable-openapi true --use-controllers false
 
 # Tạo thư viện Class Library (Chỉ chứa code, không chạy được độc lập)
-dotnet new classlib -n AssetManagement.Domain -o src/AssetManagement.Domain
+dotnet new classlib -n Assetly.Domain -o src/AssetManagement.Domain
 
 # Tạo dự án Console (Tool nhỏ, chạy nền)
 dotnet new console -n DataSeeder -o tools/DataSeeder
 
 # Tạo dự án Unit Test (Dùng xUnit)
-dotnet new xunit -n AssetManagement.Domain.UnitTests -o tests/AssetManagement.Domain.UnitTests
+dotnet new xunit -n Assetly.Domain.UnitTests -o tests/AssetManagement.Domain.UnitTests
 ```
 
 ### 4. Quản lý Reference (Gắn kết các Project)
@@ -59,20 +59,20 @@ Thay vì click chuột phải "Add Reference", bạn dùng CLI:
 
 ```bash
 # Đứng từ API, gọi sang Application
-dotnet add src/API/AssetManagement.Api/AssetManagement.Api.csproj reference src/AssetManagement.Application/AssetManagement.Application.csproj
+dotnet add src/API/Assetly.Api/AssetManagement.Api.csproj reference src/AssetManagement.Application/AssetManagement.Application.csproj
 ```
 
 ### 5. Quản lý Thư viện ngoài (NuGet Packages)
 
 ```bash
 # Cài thư viện MediatR vào Application
-dotnet add src/AssetManagement.Application/AssetManagement.Application.csproj package MediatR
+dotnet add src/Assetly.Application/AssetManagement.Application.csproj package MediatR
 
 # Cài thư viện EF Core với phiên bản cụ thể
-dotnet add src/AssetManagement.Infrastructure/AssetManagement.Infrastructure.csproj package Microsoft.EntityFrameworkCore.SqlServer --version 10.0.0
+dotnet add src/Assetly.Infrastructure/AssetManagement.Infrastructure.csproj package Microsoft.EntityFrameworkCore.SqlServer --version 10.0.0
 
 # Xóa thư viện
-dotnet remove src/AssetManagement.Api/AssetManagement.Api.csproj package Newtonsoft.Json
+dotnet remove src/Assetly.Api/AssetManagement.Api.csproj package Newtonsoft.Json
 ```
 
 ### 6. Code Generation (Sinh file code)
