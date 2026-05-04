@@ -3,6 +3,13 @@
   <ItemGroup>
     <ProjectReference Include="..\Assetly.Modules.Assets.Domain\Assetly.Modules.Assets.Domain.csproj" />
     <ProjectReference Include="..\..\..\Shared\Assetly.Shared.Application\Assetly.Shared.Application.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Assetly.Shared.Domain\Assetly.Shared.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.72" />
+    <PackageReference Include="MediatR" Version="14.1.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -1,0 +1,23 @@
+services:
+  assetly.api:
+    image: ${DOCKER_REGISTRY-}assetly
+    container_name: Assetly.Api
+    build:
+      context: .
+      dockerfile: src/API/Assetly.Api/dockerfile
+    ports:
+      - "5001:8081"
+      - "5002:8082"
+
+  assetly.database:
+      image: postgres:16
+      container_name: Assetly.Database
+      environment:
+        - POSTGRES_DB=assetly
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+      volumes:
+        - ./.containers/db:/var/lib/postgresql/data
+      ports:
+        - "5433:5432"
+

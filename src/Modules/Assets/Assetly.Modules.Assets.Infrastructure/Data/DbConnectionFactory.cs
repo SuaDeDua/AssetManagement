@@ -2,7 +2,7 @@
 using Assetly.Shared.Application.Data;
 using Npgsql;
 
-namespace Assetly.Shared.Infrastructure.Data;
+namespace Assetly.Modules.Assets.Infrastructure.Data;
 
 internal sealed class DbConnectionFactory(NpgsqlDataSource dataSource) : IDbConnectionFactory
 {
