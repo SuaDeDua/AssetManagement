@@ -6,6 +6,7 @@ using Assetly.Modules.Assets.Infrastructure.Data;
 using Assetly.Modules.Assets.Infrastructure.Database;
 using Assetly.Modules.Assets.Presentation.Assets;
 using Assetly.Shared.Application.Data;
+using Assetly.Shared.Auditing;
 using FluentValidation;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
@@ -54,17 +55,25 @@ public static class AssetsModule
 
         services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
 
-        services.AddDbContext<AssetsDbContext>(options =>
-            options
-                .UseNpgsql(
-                    databaseConnectionString,
-                    npgsqlOptions =>
-                        npgsqlOptions.MigrationsHistoryTable(
-                            HistoryRepository.DefaultTableName,
-                            Schemas.Assets
-                        )
-                )
-                .UseSnakeCaseNamingConvention()
+        services.AddScoped<AuditSaveChangesInterceptor>();
+
+        services.AddDbContext<AssetsDbContext>(
+            (sp, options) =>
+            {
+                var interceptor = sp.GetRequiredService<AuditSaveChangesInterceptor>();
+
+                options
+                    .UseNpgsql(
+                        databaseConnectionString,
+                        npgsqlOptions =>
+                            npgsqlOptions.MigrationsHistoryTable(
+                                HistoryRepository.DefaultTableName,
+                                Schemas.Assets
+                            )
+                    )
+                    .UseSnakeCaseNamingConvention()
+                    .AddInterceptors(interceptor);
+            }
         );
         services.AddScoped<IAssetRepository, AssetRepository>();
 

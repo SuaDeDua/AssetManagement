@@ -15,6 +15,7 @@
     <ProjectReference Include="..\Assetly.Modules.Assets.Presentation\Assetly.Modules.Assets.Presentation.csproj" />
     <ProjectReference Include="..\Assetly.Modules.Assets.Application\Assetly.Modules.Assets.Application.csproj" />
     <ProjectReference Include="..\..\..\Shared\Assetly.Shared.Infrastructure\Assetly.Shared.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Assetly.Shared.Auditing\Assetly.Shared.Auditing.csproj" />
   </ItemGroup>
 
 </Project>

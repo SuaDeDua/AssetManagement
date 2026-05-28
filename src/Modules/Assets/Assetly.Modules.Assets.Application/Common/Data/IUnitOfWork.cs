@@ -1,4 +1,4 @@
-﻿namespace Assetly.Modules.Assets.Application.Data;
+﻿namespace Assetly.Modules.Assets.Application.Common.Data;
 
 public interface IUnitOfWork
 {

@@ -1,22 +1,43 @@
-﻿using Assetly.Modules.Assets.Application.Data;
+﻿using Assetly.Modules.Assets.Application.Common.Data;
+using Assetly.Modules.Assets.Application.Common.Messaging;
+using Assetly.Modules.Assets.Domain.AssetModels;
 using Assetly.Modules.Assets.Domain.Assets;
-using MediatR;
+using Assetly.Shared.Domain.Common;
 
 namespace Assetly.Modules.Assets.Application.Assets.CreateAsset;
 
 internal sealed class CreateAssetCommandHandler(
+    IAssetModelRepository assetModelRepository,
     IAssetRepository assetRepository,
     IUnitOfWork unitOfWork
-) : IRequestHandler<CreateAssetCommand, Guid>
+) : ICommandHandler<CreateAssetCommand, Guid>
 {
-    public async Task<Guid> Handle(CreateAssetCommand request, CancellationToken cancellationToken)
+    public async Task<Result<Guid>> Handle(
+        CreateAssetCommand request,
+        CancellationToken cancellationToken
+    )
     {
-        var asset = Asset.Create(request.Name, request.Description, request.SerialNumber);
+        AssetModel? assetModel = await assetModelRepository.GetAsync(
+            request.AssetModelId,
+            cancellationToken
+        );
 
-        assetRepository.Insert(asset);
+        if (assetModel is null)
+        {
+            return Result<Guid>.Failure(AssetModelError.NotFound(request.AssetModelId));
+        }
+
+        var result = Asset.Create(
+            assetModel.Id,
+            assetModel.Name,
+            request.Description,
+            request.SerialNumber
+        );
+
+        assetRepository.Insert(result.Value);
 
         await unitOfWork.SaveChangesAsync(cancellationToken);
 
-        return asset.Id;
+        return result.Value.Id;
     }
 }

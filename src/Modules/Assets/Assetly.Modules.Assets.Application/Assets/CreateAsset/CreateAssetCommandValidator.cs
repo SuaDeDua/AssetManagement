@@ -6,8 +6,9 @@ internal sealed class CreateAssetCommandValidator : AbstractValidator<CreateAsse
 {
     public CreateAssetCommandValidator()
     {
-        RuleFor(x => x.Name).NotEmpty();
+        RuleFor(x => x.AssetModelId).NotEmpty();
         RuleFor(x => x.Description).NotEmpty();
         RuleFor(x => x.SerialNumber).NotEmpty();
+        RuleFor(x => x.AssetModelId).NotEmpty();
     }
 }

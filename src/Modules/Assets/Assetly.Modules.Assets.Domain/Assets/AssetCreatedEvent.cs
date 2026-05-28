@@ -1,11 +1,8 @@
-﻿using Assetly.Shared.Kernel.Events;
+﻿using Assetly.Shared.Domain.Events;
 
 namespace Assetly.Modules.Assets.Domain.Assets;
 
-public record AssetCreatedEvent(Guid AssetId, string Name, string Description, string SerialNumber)
-    : IDomainEvent
+public record AssetCreatedEvent(Guid AssetId) : DomainEvent
 {
-    public Guid EventId { get; } = Guid.NewGuid();
-    public DateTimeOffset OccurredOn { get; } = DateTimeOffset.UtcNow;
-    public int Version { get; }
+    public Guid AssetId { get; init; } = AssetId;
 }

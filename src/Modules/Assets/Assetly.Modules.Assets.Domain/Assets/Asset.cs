@@ -1,34 +1,40 @@
-﻿using Assetly.Shared.Domain.Common;
+﻿using Assetly.Modules.Assets.Domain.AssetModels;
+using Assetly.Shared.Domain.Common;
 using Assetly.Shared.Domain.ValueObjects;
+using ErrorOr;
 
 namespace Assetly.Modules.Assets.Domain.Assets;
 
 public sealed class Asset : AggregateRoot<Guid>
 {
-    public string Name { get; private set; } = null!;
-
     public string Description { get; private set; } = null!;
 
     public string SerialNumber { get; private set; } = null!;
 
     public AssetStatus Status { get; private set; }
 
+    public Guid AssetModelId { get; private set; }
+
     private Asset() { }
 
-    private Asset(string name, string description, string serialNumber)
+    private Asset(string description, string serialNumber, Guid assetModelId)
     {
         Id = Guid.CreateVersion7();
-        Name = name;
         Description = description;
         SerialNumber = serialNumber;
         Status = AssetStatus.Available;
+        AssetModelId = assetModelId;
     }
 
-    public static Asset Create(string name, string description, string serialNumber)
+    public static ErrorOr<Asset> Create(
+        string description,
+        string serialNumber,
+        AssetModel assetModel
+    )
     {
-        var asset = new Asset(name, description, serialNumber);
+        var asset = new Asset(description, serialNumber, assetModel.Id);
 
-        asset.AddDomainEvent(new AssetCreatedEvent(asset.Id, name, description, serialNumber));
+        asset.AddDomainEvent(new AssetCreatedEvent(asset.Id));
         return asset;
     }
 }
