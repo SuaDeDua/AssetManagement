@@ -4,6 +4,7 @@ using Assetly.Modules.Assets.Domain.Manufacturers;
 using Assetly.Shared.Domain.Common;
 using Assetly.Shared.Domain.Validation;
 using Assetly.Shared.Domain.ValueObjects;
+using ErrorOr;
 
 namespace Assetly.Modules.Assets.Domain.AssetModels;
 
@@ -52,7 +53,7 @@ public sealed class AssetModel : AggregateRoot<Guid>
         return assetModel;
     }
 
-    public Result ChangeName(string newName)
+    public ErrorOr<Success> ChangeName(string newName)
     {
         Guard.AgainstNullOrEmpty(newName);
 
