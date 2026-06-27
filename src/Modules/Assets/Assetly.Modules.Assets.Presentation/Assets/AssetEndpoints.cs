@@ -8,5 +8,6 @@ public static class AssetEndpoints
     {
         CreateAsset.MapEndpoint(app);
         GetAsset.MapEndpoint(app);
+        UpdateAsset.MapEndpoint(app);
     }
 }

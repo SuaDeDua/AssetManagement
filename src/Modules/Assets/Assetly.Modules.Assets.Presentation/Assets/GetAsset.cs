@@ -1,4 +1,6 @@
 ﻿using Assetly.Modules.Assets.Application.Assets.GetAsset;
+using Assetly.Modules.Assets.Presentation.ApiResults;
+using Assetly.Shared.Domain.Common;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -14,9 +16,9 @@ internal static class GetAsset
                 "assets/{id}",
                 async (Guid id, ISender sender) =>
                 {
-                    AssetResponse asset = await sender.Send(new GetAssetQuery(id));
+                    Result<AssetResponse> result = await sender.Send(new GetAssetQuery(id));
 
-                    return asset is null ? Results.NotFound() : Results.Ok(asset);
+                    return result.Match(Results.Ok, ApiResults.ApiResults.Problem);
                 }
             )
             .WithTags(Tags.Assets);

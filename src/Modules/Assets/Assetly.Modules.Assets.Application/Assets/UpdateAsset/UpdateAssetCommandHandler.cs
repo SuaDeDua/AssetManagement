@@ -3,21 +3,26 @@ using Assetly.Modules.Assets.Application.Common.Messaging;
 using Assetly.Modules.Assets.Domain.Assets;
 using Assetly.Shared.Domain.Common;
 
-namespace Assetly.Modules.Assets.Application.Assets.CreateAsset;
+namespace Assetly.Modules.Assets.Application.Assets.UpdateAsset;
 
-internal sealed class CreateAssetCommandHandler(
+internal sealed class UpdateAssetCommandHandler(
     IAssetRepository assetRepository,
     IUnitOfWork unitOfWork
-) : ICommandHandler<CreateAssetCommand, Guid>
+) : ICommandHandler<UpdateAssetCommand, Guid>
 {
     public async Task<Result<Guid>> Handle(
-        CreateAssetCommand request,
+        UpdateAssetCommand request,
         CancellationToken cancellationToken
     )
     {
-        var asset = Asset.Create(request.Name, request.Description, request.SerialNumber);
+        Asset? asset = await assetRepository.GetAsync(request.AssetId, cancellationToken);
 
-        assetRepository.Insert(asset);
+        if (asset is null)
+        {
+            return Result<Guid>.Failure(AssetErrors.NotFound(request.AssetId));
+        }
+
+        asset.UpdateDetails(request.Description);
 
         await unitOfWork.SaveChangesAsync(cancellationToken);
 

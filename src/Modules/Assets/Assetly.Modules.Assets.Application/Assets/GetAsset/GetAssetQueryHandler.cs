@@ -1,14 +1,15 @@
 ﻿using System.Data.Common;
+using Assetly.Modules.Assets.Application.Common.Messaging;
 using Assetly.Shared.Application.Data;
+using Assetly.Shared.Domain.Common;
 using Dapper;
-using MediatR;
 
 namespace Assetly.Modules.Assets.Application.Assets.GetAsset;
 
 internal sealed class GetAssetQueryHandler(IDbConnectionFactory dbConnectionFactory)
-    : IRequestHandler<GetAssetQuery, AssetResponse?>
+    : IQueryHandler<GetAssetQuery, AssetResponse>
 {
-    public async Task<AssetResponse?> Handle(
+    public async Task<Result<AssetResponse>> Handle(
         GetAssetQuery request,
         CancellationToken cancellationToken
     )
@@ -27,11 +28,11 @@ internal sealed class GetAssetQueryHandler(IDbConnectionFactory dbConnectionFact
                 WHERE id = @AssetId
                 """;
 
-        AssetResponse? asset = await connection.QuerySingleOrDefaultAsync<AssetResponse>(
+        AssetResponse assetResponse = await connection.QuerySingleOrDefaultAsync<AssetResponse>(
             sql,
             request
         );
 
-        return asset;
+        return Result<AssetResponse>.Success(assetResponse!);
     }
 }

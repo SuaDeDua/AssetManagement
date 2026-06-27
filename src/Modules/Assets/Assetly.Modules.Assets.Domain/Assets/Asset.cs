@@ -7,7 +7,7 @@ public sealed class Asset : AggregateRoot<Guid>
 {
     public string Name { get; private set; } = null!;
 
-    public string Description { get; private set; } = null!;
+    public Description Description { get; private set; } = null!;
 
     public string SerialNumber { get; private set; } = null!;
 
@@ -15,7 +15,7 @@ public sealed class Asset : AggregateRoot<Guid>
 
     private Asset() { }
 
-    private Asset(string name, string description, string serialNumber)
+    private Asset(string name, Description description, string serialNumber)
     {
         Id = Guid.CreateVersion7();
         Name = name;
@@ -24,11 +24,23 @@ public sealed class Asset : AggregateRoot<Guid>
         Status = AssetStatus.Available;
     }
 
-    public static Asset Create(string name, string description, string serialNumber)
+    public static Asset Create(string name, Description description, string serialNumber)
     {
         var asset = new Asset(name, description, serialNumber);
 
-        asset.AddDomainEvent(new AssetCreatedEvent(asset.Id, name, description, serialNumber));
+        asset.AddDomainEvent(new AssetCreatedEvent(asset.Id));
         return asset;
+    }
+
+    public void UpdateDetails(Description description)
+    {
+        if (Description == description)
+        {
+            return;
+        }
+
+        Description = description;
+
+        AddDomainEvent(new AssetUpdateDetailsDomainEvent(Id, Description));
     }
 }

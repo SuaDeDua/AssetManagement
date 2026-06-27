@@ -1,4 +1,7 @@
 ﻿using Assetly.Modules.Assets.Application.Assets.CreateAsset;
+using Assetly.Modules.Assets.Presentation.ApiResults;
+using Assetly.Shared.Domain.Common;
+using Assetly.Shared.Domain.ValueObjects;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -14,15 +17,15 @@ internal static class CreateAsset
                 "assets",
                 async (Request request, ISender sender) =>
                 {
-                    var command = new CreateAssetCommand(
-                        request.Name,
-                        request.Description,
-                        request.SerialNumber
+                    Result<Guid> result = await sender.Send(
+                        new CreateAssetCommand(
+                            request.Name,
+                            request.Description,
+                            request.SerialNumber
+                        )
                     );
 
-                    Guid assetId = await sender.Send(command);
-
-                    return Results.Ok(assetId);
+                    return result.Match(Results.Ok, ApiResults.ApiResults.Problem);
                 }
             )
             .WithTags(Tags.Assets);
@@ -31,7 +34,7 @@ internal static class CreateAsset
     internal sealed class Request
     {
         public string Name { get; set; }
-        public string Description { get; set; }
+        public Description Description { get; set; }
         public string SerialNumber { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Assetly.Modules.Assets.Application;
-using Assetly.Modules.Assets.Application.Data;
+using Assetly.Modules.Assets.Application.Common.Data;
 using Assetly.Modules.Assets.Domain.Assets;
 using Assetly.Modules.Assets.Infrastructure.Assets;
 using Assetly.Modules.Assets.Infrastructure.Data;

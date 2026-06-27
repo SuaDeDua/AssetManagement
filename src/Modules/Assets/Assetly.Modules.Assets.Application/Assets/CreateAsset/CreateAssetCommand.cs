@@ -1,6 +1,7 @@
-﻿using MediatR;
+﻿using Assetly.Modules.Assets.Application.Common.Messaging;
+using Assetly.Shared.Domain.ValueObjects;
 
 namespace Assetly.Modules.Assets.Application.Assets.CreateAsset;
 
-public record CreateAssetCommand(string Name, string Description, string SerialNumber)
-    : IRequest<Guid>;
+public sealed record CreateAssetCommand(string Name, Description Description, string SerialNumber)
+    : ICommand<Guid>;
