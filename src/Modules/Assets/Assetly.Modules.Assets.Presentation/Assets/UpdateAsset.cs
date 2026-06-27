@@ -15,7 +15,7 @@ internal sealed class UpdateAsset
     {
         app.MapPut(
                 "assets/{id}/updates",
-                async (Guid id, UpdateAssetRequest request, ISender sender) =>
+                async (Guid id, Request request, ISender sender) =>
                 {
                     Result result = await sender.Send(
                         new UpdateAssetCommand(id, new Description(request.Description))
@@ -27,7 +27,7 @@ internal sealed class UpdateAsset
             .WithTags(Tags.Assets);
     }
 
-    internal sealed class UpdateAssetRequest
+    internal sealed class Request
     {
         public Description Description { get; init; }
     }
